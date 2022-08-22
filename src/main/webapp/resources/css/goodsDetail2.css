@@ -4,6 +4,10 @@ a{
 	text-decoration: none;
 }
 
+body{
+
+	width: 1920px;
+}
 /* 수량버튼 시작 */
 .updownBtn{
 	width: 60px;
@@ -192,10 +196,6 @@ a{
 
 
 
-body{
-
-	width: 1920px;
-}
 
 /*  검색창*/
 .searchInput{
@@ -368,9 +368,11 @@ body{
     margin-left: 331px;
     margin-top: 52px;
     height: auto;
+    	
 		}	
 		.image_wrap img {
-	
+border-color:#00ffff;
+		border-radius:30px;
 		position:absolute;
 		 width: 780px;
 		    max-width: 100%;
