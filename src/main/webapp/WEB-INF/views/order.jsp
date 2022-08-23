@@ -19,24 +19,9 @@
 
 </head>
 <body>
-<%@include file="header.jsp" %>
 
-	<div class="wrapper">
-		<div class="wrap">
-			<div class="search_area">
-				<div class="search_wrap">
-					<form id="searchForm" action="/search" method="get">
-						<div class="search_input">
-							<select name="type">
-								<option value="T">품명</option>
 
-							</select> <input type="text" name="keyword"
-								value="<c:out value="${pageMaker.cri.keyword}"/>">
-							<button class='btn search_btn'>검 색</button>
-						</div>
-					</form>
-				</div>
-			</div>
+	
 			<div class="content_area">
 
 				<div class="content_subject">
