@@ -125,13 +125,13 @@
 </head>
 <body>
 
-	<!-- 	<video id="videobcg" preload="auto" autoplay="autoplay" loop="loop"
+		<video id="videobcg" preload="auto" autoplay="autoplay" loop="loop"
 		muted="muted">
 
-		<source src="/resources/css/adobeVideo/blackHoleSmall.mp4"
+		<source src="../../resources/css/adobeVideo/blueStarsSmall.mp4"
 			type="video/mp4">
 
-	</video> -->
+	</video> 
 	<div class="header">
 		<h1 class="Logo">
 			<a href="/"> SPACE SHIP</a>
@@ -313,9 +313,9 @@
 							<tr>
 								<td>
 									<table>
-										<tr class="AllPriceText">
-											<td>총 상품 가격</td>
-											<td><span class="totalPrice_span"></span> 원</td>
+										<tr >
+											<td class="AllPriceText">총 상품 가격</td>
+											<td class="AllPriceTextWon"><span class="totalPrice_span"></span> 원</td>
 										</tr>
 										<tr class="AllDeliText">
 											<td>배송비</td>
@@ -344,9 +344,9 @@
 								<td>
 									<table>
 										<tbody>
-											<tr class="AllWillPrice">
-												<td><strong>총 결제 예상 금액</strong></td>
-												<td><span class="finalTotalPrice_span"></span> 원</td>
+											<tr >
+												<td class="AllWillPrice"><strong>총 결제 예상 금액</strong></td>
+												<td class="wonText"><span class="finalTotalPrice_span"></span> 원</td>
 											</tr>
 										</tbody>
 									</table>
@@ -358,7 +358,7 @@
 				</div>
 				<!-- 구매 버튼 영역 -->
 				<div class="content_btn_section">
-					<a class="order_btn">주문하기</a>
+					<button class="order_btn callShipBtn">주문하기</button>
 				</div>
 
 
