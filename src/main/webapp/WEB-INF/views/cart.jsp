@@ -111,32 +111,30 @@
 /* 상품 이미지 관련 */
 .image_wrap {
 	width: 150px;
-	display:flex;
-margin-left:10px;
-margin-top::10px;
+	display: flex;
+	margin-left: 10px;
+	margin-top: :10px;
 }
 
 .image_wrap img {
-
 	max-width: 100%;
 	height: auto;
-	
 	border-radius: 10%
 }
 </style>
 </head>
 <body>
 
-	<video id="videobcg" preload="auto" autoplay="autoplay" loop="loop"
+	<!-- 	<video id="videobcg" preload="auto" autoplay="autoplay" loop="loop"
 		muted="muted">
 
 		<source src="/resources/css/adobeVideo/blackHoleSmall.mp4"
 			type="video/mp4">
 
-	</video>
+	</video> -->
 	<div class="header">
 		<h1 class="Logo">
-			<a href="/adminMenu"> SPACE SHIP</a>
+			<a href="/"> SPACE SHIP</a>
 		</h1>
 		<a href="/moveMakeWeb2" class="a1">역사</a> <a href="/moveMakeWeb3"
 			class="a1">사업분야</a> <a href="/moveMakeWeb4" class="a1">ufo</a> <a
@@ -228,7 +226,7 @@ margin-top::10px;
 						</div>
 					</div>
 					<div class="neon_effect">
-						<table class="subject_table">
+						<table class="      ">
 
 							<tbody>
 
@@ -246,8 +244,8 @@ margin-top::10px;
 
 					<!-- 체크박스 전체 여부 -->
 					<div class="all_check_input_div">
-						<input type="checkbox" class="all_check_input"
-							checked="checked"><span class="all_check_span">전체선택</span>
+						<input type="checkbox" class="all_check_input" checked="checked"><span
+							class="all_check_span">전체선택</span>
 					</div>
 
 					<table class="cart_table">
@@ -256,11 +254,11 @@ margin-top::10px;
 							<c:forEach items="${cartInfo}" var="ci">
 								<tr>
 									<td class="choiceBox cart_info_td"><input type="checkbox"
-										class="individual_cart_checkbox"
-										checked="checked"> <input type="hidden"
-										class="individual_shipPrice_input" value="${ci.shipPrice}">
-										<input type="hidden" class="individual_shipCount_input"
-										value="${ci.shipCount}"> <input type="hidden"
+										class="individual_cart_checkbox" checked="checked"> <input
+										type="hidden" class="individual_shipPrice_input"
+										value="${ci.shipPrice}"> <input type="hidden"
+										class="individual_shipCount_input" value="${ci.shipCount}">
+										<input type="hidden"
 										class="individual_shipPrice_shipCount_input"
 										value="${ci.shipPrice * ci.shipCount}"> <input
 										type="hidden" class="individual_shipId_input"
@@ -277,19 +275,29 @@ margin-top::10px;
 									</td>
 									<td class="shipNameText"><span class="shipNameSpanc">
 											${ci.shipName}</span></td>
-									<td class="priceText price_td"><span>정가 : <fmt:formatNumber
+
+									<!-- 가격들어가는곳 -->
+									<td class="priceText price_td"><span><fmt:formatNumber
 												value="${ci.shipPrice}" pattern="#,### 원" /></span> <br></td>
 									<td class="countBox table_text_align_center">
 										<div class="table_text_align_center quantity_div">
 											<input type="text" value="${ci.shipCount}"
 												class="quantity_input" id="countInput">
-											<button class="upBtn plus_btn"><p class="plusText">+</p></button>
-											<button class="downBtn minus_btn">-</button>
-										</div> <a class="quantity_modify_btn" data-cartid="${ci.cartId}">변경</a>
+											<button class="upBtn plus_btn">
+												<p class="upText">+</p>
+											</button>
+											<button class="downBtn minus_btn">
+												<p class="downText">-</p>
+											</button>
+										</div> <a class="quantity_modify_btn changeBtn"
+										data-cartid="${ci.cartId}"><p class="changeText">변경</p></a>
 									</td>
 
-									<td class="td_width_4 table_text_align_center delete_btn">
-										<button id="delete_btn" data-cartid="${ci.cartId}">삭제</button>
+									<td class=" deleteBox">
+										<button id="delete_btn" class="deleteBtn"
+											data-cartid="${ci.cartId}">
+											<p class="deleteText">삭제</p>
+										</button>
 									</td>
 								</tr>
 							</c:forEach>
@@ -305,15 +313,15 @@ margin-top::10px;
 							<tr>
 								<td>
 									<table>
-										<tr>
+										<tr class="AllPriceText">
 											<td>총 상품 가격</td>
 											<td><span class="totalPrice_span"></span> 원</td>
 										</tr>
-										<tr>
+										<tr class="AllDeliText">
 											<td>배송비</td>
 											<td><span class="delivery_price"></span>원</td>
 										</tr>
-										<tr>
+										<tr class="AllCountText">
 											<td>총 주문 상품수</td>
 											<td><span class="totalKind_span"></span>종 <span
 												class="totalCount_span"></span>대</td>
@@ -330,13 +338,13 @@ margin-top::10px;
 								</td>
 							</tr>
 						</table>
-						<div class="boundary_div">구분선</div>
+
 						<table>
 							<tr>
 								<td>
 									<table>
 										<tbody>
-											<tr>
+											<tr class="AllWillPrice">
 												<td><strong>총 결제 예상 금액</strong></td>
 												<td><span class="finalTotalPrice_span"></span> 원</td>
 											</tr>

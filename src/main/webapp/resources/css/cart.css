@@ -6,9 +6,11 @@
 a{
 	text-decoration: none;
 }
-
+/* 몸 */
 body{
 	width: 1920px;
+	background-image: url("../css/hd-wallpaper.jpg");
+  background-size: cover;
 }
 
 /* 전체선택 체크박스 */
@@ -17,7 +19,12 @@ body{
     display: flex;
     margin-left: 86px;
     margin-top: -20px;
+    
 
+}
+/* 전체선택 체크박스 텍스트*/
+.all_check_span{
+	color:white
 }
 
 
@@ -29,7 +36,7 @@ body{
     font-family: 'Song Myung', serif;
     font-weight: bold;
     font-size: 2em;
-    animation: neon3 1.5s ease-in-out infinite alternate;
+   /*  animation: neon3 1.5s ease-in-out infinite alternate; */
 }
 /* 선택체크박스 */
 .choiceBox{
@@ -40,15 +47,16 @@ body{
 
 /* 상품이름문구  */
 .shipNameText{
-	    display: flex;
-    margin-left: 83px;
-    margin-top: 49px;
+    color: white;
+    display: flex;
+    margin-left: 220px;
+    margin-top: 46px;
 }
 /* 상풍가격 */
-.priceText{
-	    display: flex;
-    margin-left: 458px;
-    margin-top: -19px;
+.priceText{    color: white;
+    display: flex;
+    margin-left: 584px;
+    margin-top: -27px;
 }
 /* 수량박스 div태그 */
 .countBox{
@@ -58,24 +66,28 @@ body{
 }
 /* 수량박스 인풋 */
 #countInput{
-	background-color: transparent;
-	border-color:#00ffff;
-	border-bottom-left-radius: 30px;
-	border-top-right-radius: 30px;
-	color: #00ffff;
-	padding-left: 10px;
+	display: flex;
+    background-color: transparent;
+    border-color: #00ffff;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    color: #00ffff;
+    padding-left: 16px;
+    margin-left: 78px;
+    margin-top: -2px;
 	
 	
 }
 
 
-
-.plus_btn {
-
-	padding-top: 0px;
+/* 플러스 버튼 시작 */
+.upBtn {
+	display: flex;
+    margin-left: 77px;
+    margin-top: 4px;
+    padding-top: 0px;
     font-family: sans-serif;
     width: 53px;
-    margin-top: 20px;
     height: 23px;
     position: relative;
     z-index: 1;
@@ -95,7 +107,7 @@ body{
     will-change: filter;
 }
 
-.plus_btn:before {
+.upBtn:before {
 	   text-decoration:none;
   content: "";
   z-index: -1;
@@ -103,7 +115,7 @@ body{
   transition: 0.5s;
   position: absolute;
 }
-.plus_btn:after {
+.upBtn:after {
 	   text-decoration:none;
   content: "";
   position: absolute;
@@ -119,17 +131,228 @@ body{
   transform: translate3d(-50%, 0, 0);
   transition: 0.4s;
 }
-.plus_btn:hover:after, .plus_btn:focus:after {
+.upBtn:hover:after, .upBtn:focus:after {
 
   transform: translate3d(0%, 0, 0) scale3d(1.5, 1.2, 1);
 }
-.plusText{
-	    margin-top: -4px;
+.upText{
+	          margin-top: 0px;
+    margin-left: 19px;
+}
+/* 플러스 버튼 끝 */
+
+
+
+/*마이너스 버튼시작 */
+.downBtn {
+    display:flex;
+	padding-top: 0px;
+    font-family: sans-serif;
+    width: 53px;
+    margin-left: 130px;
+    margin-top: -23px;
+    height: 23px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: url(https://api.thumbr.io/whitenoise-361x370.png?background=00000000&noise=000000f&density=50&opacity=40) repeat top left/1.25em, url(https://www.transparenttextures.com/patterns/green-dust-and-scratches.png) no-repeat center/100%;
+    /* font-family: "Space Mono", monospace; */
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    letter-spacing: 0.1em;
+    -webkit-text-stroke: 0.025em currentColor;
+    text-shadow: 0.05em 0.075em 0.075em rgb(255 255 255 / 80%), 0.05em 0.075em 1em rgb(255 255 255 / 50%), -0.04em -0.04em 0.05em rgb(0 0 0 / 50%);
+    box-shadow: inset 0.1em 0.1em 0.075em rgb(255 255 255 / 67%), inset -0.1em -0.1em 0.2em rgb(0 0 0 / 25%), inset 0 0 0.4em rgb(255 255 255 / 25%);
+    transition: 0.5s;
+    will-change: filter;
+}
+
+.downBtn:before {
+	   text-decoration:none;
+  content: "";
+  z-index: -1;
+  mix-blend-mode: color;
+  transition: 0.5s;
+  position: absolute;
+}
+.downBtn:after {
+	   text-decoration:none;
+  content: "";
+  position: absolute;
+  top: -100%;
+  bottom: -100%;
+  width: 200%;
+  left: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: linear-gradient(120deg, transparent 10%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9), transparent 20%, transparent 30%, white, rgba(255, 255, 255, 0.75), transparent 70%, transparent, white, rgba(255, 255, 255, 0.75), transparent);
+  mix-blend-mode: overlay;
+  opacity: 0.9;
+  transform: translate3d(-50%, 0, 0);
+  transition: 0.4s;
+}
+.downBtn:hover:after, .downBtn:focus:after {
+
+  transform: translate3d(0%, 0, 0) scale3d(1.5, 1.2, 1);
+}
+.downText{
+	    margin-top: 0px;
+    margin-left: 20px;
+}
+/*마이너스 버튼끝 */
+
+/*변경 버튼 시작 */
+.changeBtn {
+
+	padding-top: 0px;
+    font-family: sans-serif;
+        width: 92px;
+    margin-left: -91px;
+    margin-top: 22px;
+    height: 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: url(https://api.thumbr.io/whitenoise-361x370.png?background=00000000&noise=000000f&density=50&opacity=40) repeat top left/1.25em, url(https://www.transparenttextures.com/patterns/green-dust-and-scratches.png) no-repeat center/100%;
+    /* font-family: "Space Mono", monospace; */
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    letter-spacing: 0.1em;
+    -webkit-text-stroke: 0.025em currentColor;
+    text-shadow: 0.05em 0.075em 0.075em rgb(255 255 255 / 80%), 0.05em 0.075em 1em rgb(255 255 255 / 50%), -0.04em -0.04em 0.05em rgb(0 0 0 / 50%);
+    box-shadow: inset 0.1em 0.1em 0.075em rgb(255 255 255 / 67%), inset -0.1em -0.1em 0.2em rgb(0 0 0 / 25%), inset 0 0 0.4em rgb(255 255 255 / 25%);
+    transition: 0.5s;
+    will-change: filter;
+}
+
+.changeBtn:before {
+	   text-decoration:none;
+  content: "";
+  z-index: -1;
+  mix-blend-mode: color;
+  transition: 0.5s;
+  position: absolute;
+}
+.changeBtn:after {
+	   text-decoration:none;
+  content: "";
+  position: absolute;
+  top: -100%;
+  bottom: -100%;
+  width: 200%;
+  left: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: linear-gradient(120deg, transparent 10%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9), transparent 20%, transparent 30%, white, rgba(255, 255, 255, 0.75), transparent 70%, transparent, white, rgba(255, 255, 255, 0.75), transparent);
+  mix-blend-mode: overlay;
+  opacity: 0.9;
+  transform: translate3d(-50%, 0, 0);
+  transition: 0.4s;
+}
+.changeBtn:hover:after, .changeBtn:focus:after {
+
+  transform: translate3d(0%, 0, 0) scale3d(1.5, 1.2, 1);
+}
+.changeText{
+	     margin-top: -3px;
     margin-left: 1px;
+}
+/*변경 버튼끝 */
+
+
+
+
+
+/*삭제  버튼 시작 */
+.deleteBtn {
+    padding-top: 0px;
+    font-family: sans-serif;
+    width: 136px;
+    margin-left: 192px;
+    margin-top: 22px;
+    height: 46px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: url(https://api.thumbr.io/whitenoise-361x370.png?background=00000000&noise=000000f&density=50&opacity=40) repeat top left/1.25em, url(https://www.transparenttextures.com/patterns/green-dust-and-scratches.png) no-repeat center/100%;
+    /* font-family: "Space Mono", monospace; */
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    letter-spacing: 0.1em;
+    -webkit-text-stroke: 0.025em currentColor;
+    text-shadow: 0.05em 0.075em 0.075em rgb(255 255 255 / 80%), 0.05em 0.075em 1em rgb(255 255 255 / 50%), -0.04em -0.04em 0.05em rgb(0 0 0 / 50%);
+    box-shadow: inset 0.1em 0.1em 0.075em rgb(255 255 255 / 67%), inset -0.1em -0.1em 0.2em rgb(0 0 0 / 25%), inset 0 0 0.4em rgb(255 255 255 / 25%);
+    transition: 0.5s;
+    will-change: filter;
 }
 
 
+.deleteBtn:before {
+	   text-decoration:none;
+  content: "";
+  z-index: -1;
+  mix-blend-mode: color;
+  transition: 0.5s;
+  position: absolute;
+}
+.deleteBtn:after {
+	   text-decoration:none;
+  content: "";
+  position: absolute;
+  top: -100%;
+  bottom: -100%;
+  width: 200%;
+  left: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: linear-gradient(120deg, transparent 10%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9), transparent 20%, transparent 30%, white, rgba(255, 255, 255, 0.75), transparent 70%, transparent, white, rgba(255, 255, 255, 0.75), transparent);
+  mix-blend-mode: overlay;
+  opacity: 0.9;
+  transform: translate3d(-50%, 0, 0);
+  transition: 0.4s;
+}
+.deleteBtn:hover:after, .deleteBtn:focus:after {
 
+  transform: translate3d(0%, 0, 0) scale3d(1.5, 1.2, 1);
+}
+.deleteText{
+	  margin-top: -1px;
+    margin-left: 1px;
+}
+/*삭제 버튼끝 */
+
+
+/*총 결제대형박스 */
+.content_total_section{
+    margin-left: 700px;
+    margin-top: 100px;
+	width: 500px;
+	height: 300px;
+  border: 3px solid #00ffff;
+  border-radius:30px; 	
+}
+/* 총결제 첵스트 */
+.AllPriceText{
+	color:#00ffff;
+}
+/*배송비 첵스트 */
+.AllDeliText{color:#00ffff;}
+
+.AllCountText{
+	color:#00ffff;
+}
+.AllWillPrice{
+	color:#00ffff;
+}
 
 /* 네개 대가리항목들 배열하기 */
 .headerText{
@@ -142,9 +365,9 @@ body{
 }
 /* 네개대가리들 */
 .td_width_1{
-	display:flex;
-	margin-left: 10px;
-	margin-top: 10px;
+    display: flex;
+    margin-left: 181px;
+    margin-top: 10px;
 }
 .td_width_2{
 	display:flex;
@@ -168,27 +391,27 @@ body{
   color: #fff;
    font-family: Comfortaa;
  
-  animation: neon6 1.5s ease-in-out infinite alternate;
+/*   animation: neon6 1.5s ease-in-out infinite alternate; */
 }
 /* 상품가격 */
 .neon_effect th:nth-child(2){
   color: #fff;
   font-family: Lobster;
-    animation: neon8 1.5s ease-in-out infinite alternate;
+ /*    animation: neon8 1.5s ease-in-out infinite alternate; */
 
 }
 /* 상품수량 */
 .neon_effect th:nth-child(3){
   color: #fff;
   font-family: Abril Fatface;
-  animation: neon7 1.5s ease-in-out infinite alternate;
+/*   animation: neon7 1.5s ease-in-out infinite alternate; */
 }
 /* 상품삭제 */
 .neon_effect th:nth-child(4){
   color: #fff;
   font-family: Comfortaa;
   font-weight: 700;
-    animation: neon3 1.5s ease-in-out infinite alternate;
+  /*   animation: neon3 1.5s ease-in-out infinite alternate; */
 }
 
 
@@ -605,6 +828,23 @@ h1{
 
 
 
+
+.neon_effect .p1:first-child{
+  color: #fff;
+  font-family: Abril Fatface;
+  animation: neon7 1.5s ease-in-out infinite alternate;
+}
+.neon_effect .pGold:first-child{
+  color: #fff;
+  animation: neon3 1.5s ease-in-out infinite alternate;
+}
+.neon_effect .exitBtn:first-child{
+  color: #fff;
+ font-family: 'Song Myung', serif;
+  font-weight: bold;
+  font-size:2em;
+  animation: neon3 1.5s ease-in-out infinite alternate;
+}
 
 @keyframes neon1 {
   from {

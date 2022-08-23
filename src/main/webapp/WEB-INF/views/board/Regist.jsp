@@ -113,7 +113,7 @@ body {
                      placeholder="이메일" />
                   <div class="email regex"></div>
 
-                  <div class="mail_check_wrap">
+                 <!--  <div class="mail_check_wrap">
                      <div class="mail_check_input_box" id="mail_check_input_box_false">
                         <input class="mail_check_input" id="mail_check_input"
                            disabled="disabled" placeholder="인증번호를 입력해주세요. (ex:123456)">
@@ -123,7 +123,7 @@ body {
                      </div>
                      <div class="clearfix"></div>
                      <span id="mail_check_input_box_warn" class="emailCheck regex"></span>
-                  </div>
+                  </div> -->
                </div>
 
 
@@ -624,7 +624,7 @@ body {
                                  return;
                               } else if (div2 == "사용가능") {
                                  
-                               if (divEmailCheck == "") {
+                              /*  if (divEmailCheck == "") {
                                     $("#errorMsg").show();
                                     $("#errorMsg").html(
                                           "이메일 인증을 완료해주십쇼.");
@@ -635,10 +635,11 @@ body {
                                        $("#errorMsg")
                                              .html(
                                                    "인증번호를 다시 확인해주세요.ex:181818");
-                                    } else if (divEmailCheck == "인증번호가 일치합니다.") {
-                                       $("#signform").submit();
+                                    } else if (divEmailCheck == "인증번호가 일치합니다.") { 
+                                     
                                     }
-                                 }
+                                 }*/
+                                 $("#signform").submit();
                                  //빈칸 없을 때 제출.
                               }
                               }}
